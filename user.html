@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home - Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button onclick="showSection('userHome')">User Home</button>
+        <button onclick="showSection('reports')">Reports</button>
+        <button onclick="showSection('transactions')">Transactions</button>
+        <button onclick="logOut()">Log Out</button>
+    </nav>
+
+    <div id="userHome" class="visible">
+        <h1>User Dashboard</h1>
+        <p>Manage your library transactions here.</p>
+    </div>
+
+    <div id="reports" class="hidden">
+        <h2>Reports</h2>
+        <p>View reports here.</p>
+        <ul>
+            <li>Master List of Books</li>
+            <li>Active Issues</li>
+            <li>Overdue Returns</li>
+        </ul>
+    </div>
+
+    <div id="transactions" class="hidden">
+        <h2>Transactions</h2>
+        <p>Manage your transactions here.</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

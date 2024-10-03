@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home - Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button onclick="showSection('adminHome')">Admin Home</button>
+        <button onclick="showSection('reports')">Reports</button>
+        <button onclick="showSection('transactions')">Transactions</button>
+        <button onclick="logOut()">Log Out</button>
+    </nav>
+
+    <div id="adminHome" class="visible">
+        <h1>Admin Dashboard</h1>
+        <p>Manage the library from here.</p>
+    </div>
+
+    <div id="reports" class="hidden">
+        <h2>Reports</h2>
+        <p>View reports here.</p>
+        <ul>
+            <li>Master List of Books</li>
+            <li>Master List of Movies</li>
+            <li>Master List of Memberships</li>
+        </ul>
+    </div>
+
+    <div id="transactions" class="hidden">
+        <h2>Transactions</h2>
+        <p>Manage transactions here.</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button onclick="showSection('transactionHome')">Transaction Home</button>
+        <button onclick="logOut()">Log Out</button>
+    </nav>
+
+    <div id="transactionHome" class="visible">
+        <h2>Transactions</h2>
+        <label>Is Book Available?</label>
+        <input type="text" id="bookAvailability" placeholder="Enter Book Name">
+        <button onclick="checkAvailability()">Check Availability</button>
+        
+        <div id="issueBookSection" class="hidden">
+            <h3>Issue Book</h3>
+            <label>Book Name:</label>
+            <input type="text" id="issueBookName">
+            <label>Author:</label>
+            <input type="text" id="issueBookAuthor" readonly>
+            <label>Serial Number:</label>
+            <input type="text" id="issueBookSerial">
+            <button onclick="issueBook()">Issue Book</button>
+        </div>
+        
+        <div id="returnBookSection" class="hidden">
+            <h3>Return Book</h3>
+            <label>Book Name:</label>
+            <input type="text" id="returnBookName">
+            <label>Serial Number:</label>
+            <input type="text" id="returnBookSerial">
+            <button onclick="returnBook()">Return Book</button>
+        </div>
+
+        <div id="payFineSection" class="hidden">
+            <h3>Pay Fine</h3>
+            <label>Serial No:</label>
+            <input type="text" id="fineSerial">
+            <label>Fine Amount:</label>
+            <input type="text" id="fineAmount" value="0" readonly>
+            <label>Fine Paid:</label>
+            <input type="checkbox" id="finePaid">
+            <button onclick="payFine()">Pay Fine</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
